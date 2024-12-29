@@ -116,6 +116,10 @@
     $('.wxShare').hide()
   })
 
+  server.get('/privacy-policy', (req, res) => {
+  res.sendFile(path.resolve(page, './privacy-policy.html'));
+});
+  
   // listener
   window.addEventListener('load', function () {
     domReady = true
