@@ -115,7 +115,10 @@
   $('.wxShare').on('click', function () {
     $('.wxShare').hide()
   })
-
+  
+server.get('/privacy-policy', (req, res) => {
+  res.sendFile(path.resolve(__page, './privacy-policy.html'));
+});
     
   // listener
   window.addEventListener('load', function () {
